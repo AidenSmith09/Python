@@ -53,11 +53,12 @@ print(motorcycles)
 print('\n')
 print("-----我是华丽分割线：删除的第一种方法-------")
 del motorcycles[1]
+
 print(motorcycles)
 
 print('\n')
 print("-----我是华丽分割线：删除的第二种方法-------")
-#pop() 方法可以删除
+#pop() 方法删除的数据可以复用
 """
 第一个print 输出结果，是目前 motorcycles 中的列表
 第二个print 输出结果是删除掉的结果
@@ -95,4 +96,61 @@ print(motorcycles)
 too_expensive = 'yamaha' #将需要的二次使用的数据存入一个变量
 motorcycles.remove(too_expensive) #remove通过使用变量来删除，但是变量没有被删
 print(motorcycles)
-print("\nA " + too_expensive.title() + " is too expensive for me") #系统调用变量，故变量还可使用。
+print("\nA " + too_expensive.title() + " is too expensive for me.\n") #系统调用变量，故变量还可使用。
+
+#列表排序
+"""
+
+"""
+#sort()方法对列表进行永久排序
+#sort(reverse=True)
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort() #按照字母永久排序，无法逆回原来顺序
+print(cars)
+cars.sort(reverse=True)#添加参数后，执行反向排序
+print(cars)
+print('\n')
+
+#sorted()临时排序
+print("这里原列表：")
+print(cars)
+
+print("\n这里是sorted列表:")
+print(sorted(cars))
+
+print(sorted(cars,reverse=True)) #sorted中可以添加反向参数。
+
+print("\n这里再次输出原列表:")
+print(cars)
+
+#反向打印
+#目前源List是数据排列是反向。但我不想改变元素顺序，只想倒着打印出来。
+#reverse()方法提供了这一功能
+cars.reverse()
+print(cars)
+
+name = ['A', 'C', 'B', 'D']
+print(name)
+name.reverse()
+print(name)
+
+#确认列表长度
+print("列表的长度" + len(name).__str__())
+
+"""
+总结
+列表名称[数字] 可以输出下表的元素
+bicycles[0].title() 首字母大写
+
+motorcycles.append('ducati') 在列表末尾添加一个元素
+motorcycles.insert(0,'BMW') 在下标位置，写入数据。其余源数据右移一位。
+del motorcycles[1] Del语句永久删除数据，需要指定下标。
+motorcycles.pop()  删除数据可以存于变量，默认最后一个。
+motorcycles.remove('ducati') 根据元素值来进行删除，可填写变量。
+
+cars.sort() 按照字母永久排序，无法逆回原来顺序
+cars.sort(reverse=True) 添加参数后，执行反向排序
+sorted(cars) 临时排序
+sorted(cars,reverse=True) 临时反向排序
+cars.reverse() 反向输出元素。列表内元素数据
+"""
