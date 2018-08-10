@@ -24,11 +24,35 @@ for player in players[:3]: #循环0-3不包含3，依次存储至player。
     print(player.title())
 
 #Copy列表
-"""
-有时操作需要复制数据进行。
-"""
+#有时操作需要复制数据进行。
 
 my_foods = ['pizza','falafel','carrot cake']
 friend_foods = my_foods[:]
 print(my_foods)
 print(friend_foods)
+
+"""
+错误的Copy
+以下这种写法仅仅是将 fater 的值关联给 son ，而不是赋值。
+关联：A的值改变，B会随着改变
+赋值：A的值改变，B不会改变
+或者也可以理解成，一个元素，拥有两个变量。
+"""
+fater = ['A', 'B', 'C']
+son = fater
+print(fater)
+print(son)
+fater.append('D')
+print(fater)
+print(son)
+
+
+#元组
+#不可修改的列表，就是"元组"
+#注意：元组是是圆括号()，列表是方括号[]
+dimensions = (200,50)
+print(dimensions[0])
+print(dimensions[1])
+#dimensions[0] = 300
+#执行后报错，TypeError: 'tuple' object does not support item assignment
+
