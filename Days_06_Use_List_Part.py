@@ -56,3 +56,16 @@ print(dimensions[1])
 #dimensions[0] = 300
 #执行后报错，TypeError: 'tuple' object does not support item assignment
 
+#遍历元组
+print("遍历元组：")
+for vluse in dimensions:
+    print(vluse)
+
+#修改元组变量
+#前边提过，元组的变量是无法修改的，为什么这里又能说修改呢？
+#的确，元组中的元素是不能修改，但是却没有说元组不能被重新赋值
+
+dimensions = (500,499)
+print("被重新赋值的元组:")
+for vluse in dimensions:
+    print(vluse)
