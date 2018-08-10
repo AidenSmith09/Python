@@ -1,21 +1,21 @@
 
-#+-*/就不多说了
-#**两个星号代表乘方
-print(1**2)
-print(2**1,2**2,2**3,2**4,2**5,2**6,2**7,2**8,2**9,'\n')
-#整数
+# +-*/就不多说了
+# **两个星号代表乘方
+print(1 ** 2)
+print(2 ** 1, 2 ** 2, 2 ** 3, 2 ** 4, 2 ** 5, 2 ** 6, 2 ** 7, 2 ** 8, 2 ** 9, '\n')
+# 整数
 print(3 / 2)
 print(3.0 / 2)
-print(3.0 / 2.0,'\n')
+print(3.0 / 2.0, '\n')
 """
 在Python2中，3/2=1 会将小数直接删掉。
 """
-print(5+3)
-print(10-2)
-print(2*4)
-print(24//3)
+print(5 + 3)
+print(10 - 2)
+print(2 * 4)
+print(24 // 3)
 
-#浮点数
+# 浮点数
 print(0.1 + 0.1)
 print(0.2 + 0.2)
 print(2 * 0.1)
@@ -26,9 +26,9 @@ print(0.2 + 0.1)
 print(3 * 0.1)
 
 
-#避免数据类型错误
+# 避免数据类型错误
 age = 25
-#message = "Happy" + age + "rd Birthday!"
+# message = "Happy" + age + "rd Birthday!"
 message = "Happy " + str(age) + "rd Birthday!"
 print(message)
 """

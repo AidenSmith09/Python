@@ -7,26 +7,25 @@ name后的'.'是Python对变量name使用'title()'方法的操作。每个方法
 """
 print(name.upper())
 print(name.lower())
-#lower方法对于存储数据很管用，很多时候我们无法依靠用户来提供正确大小写。
-#因此先将字符串转换为小写，再将其转换为最合适的大小写数据。
+# lower方法对于存储数据很管用，很多时候我们无法依靠用户来提供正确大小写。
+# 因此先将字符串转换为小写，再将其转换为最合适的大小写数据。
 
-#字符串拼接
+# 字符串拼接
 first_name = "ada"
 last_name = "lovelaca"
 full_name = first_name + " " + last_name
 print(full_name)
 print("Hello " + full_name.title() + "!")
-#每次这样输出很麻烦，所以存储到一个变量中。
+# 每次这样输出很麻烦，所以存储到一个变量中。
 message = "Hello " + full_name.title() + "!\n"
 print(message)
 
-
-#制表符使用方式
-#\n代表这换行
+# 制表符使用方式
+# \n代表这换行
 print("Languager:\nPython\nC\nJavaScript\n")
 print("Languager:\n\tPython\n\tC\n\tJavaScript\n")
 
-#删除空白
+# 删除空白
 print('不带空格的' + 'python。')
 print('携带空格的' + 'python 。')
 print('加句号可以看的更清楚')
@@ -38,12 +37,12 @@ print('加句号可以看的更清楚')
 favorite_language = 'python '
 print('临时删除空白的' + favorite_language.rstrip())
 print('恢复删除之前的' + favorite_language)
-#仔细观察两个输出结果。发现空白被删除其实是临时的。
-#所以需要把结果返回到变量中。
+# 仔细观察两个输出结果。发现空白被删除其实是临时的。
+# 所以需要把结果返回到变量中。
 favorite_language = favorite_language.rstrip()
 print(favorite_language)
 
-favorite_language ='  Python '
+favorite_language = '  Python '
 print(favorite_language)
 favorite_language = favorite_language.lstrip()
 favorite_language = favorite_language.strip()
@@ -57,5 +56,3 @@ print(IP)
 S_IP = " Aiden Smiht "
 S_IP = S_IP.strip()
 print(S_IP)
-
-

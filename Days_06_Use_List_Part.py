@@ -21,7 +21,7 @@ print('\n')
 # 遍历列表
 print("Here are the first three playse on my team:")
 for player in players[:3]:  # 循环0-3不包含3，依次存储至player。
-    print(player.title())
+	print(player.title())
 
 # Copy列表
 # 有时操作需要复制数据进行。
@@ -58,7 +58,7 @@ print(dimensions[1])
 # 遍历元组
 print("遍历元组：")
 for vluse in dimensions:
-    print(vluse)
+	print(vluse)
 
 # 修改元组变量
 # 前边提过，元组的变量是无法修改的，为什么这里又能说修改呢？
@@ -67,4 +67,4 @@ for vluse in dimensions:
 dimensions = (500, 499)
 print("被重新赋值的元组:")
 for vluse in dimensions:
-    print(vluse)
+	print(vluse)
