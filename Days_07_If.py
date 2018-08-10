@@ -9,8 +9,28 @@ for car in cars:
 
 # 条件判断的特点
 print("\n")
-car = 'bmw'
+
+car = 'BMW'
+print('相同情况下的判断：')
+print(car == 'BMW')
+
+print('\n与小写的自己的判断：')
 print(car == 'bmw')
 
-cat = 'audi'
-print(car == 'BMw')
+print('\n区分不同的自己判断结果：')
+print(car == 'Bmw')
+print('\n将大写全部转换成小写后判断：')
+print(car.lower() == 'bmw')
+
+# 不相等判断
+A = '1'
+if A != '2':
+	print("\n数字1不等于数字2")
+
+# 数字比较
+answer = 17
+if answer != 43:
+	print("This is not the correct answer. Please try again!")
+
+# 多条件判断
+# 使用 and 判断两个条件都是True
