@@ -33,5 +33,6 @@ if answer != 43:
 	print("This is not the correct answer. Please try again!")
 
 # 多条件判断
-
+if 2 != 1:
+	print("Turn")
 # 使用 and 判断两个条件都是True
