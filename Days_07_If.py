@@ -33,4 +33,5 @@ if answer != 43:
 	print("This is not the correct answer. Please try again!")
 
 # 多条件判断
+
 # 使用 and 判断两个条件都是True
