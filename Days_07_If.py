@@ -60,8 +60,66 @@ user = 'marie'
 if user not in banned_users:
     print(user.title() + ", you can post a response if you wish")
 # 首字大写输出
-
+print("-------------if else--------------")
+#if else
+age = 17
 # if else 语句
-# if else else 语句
+if age >= 18:
+    print('you are old enough to vote!')
+    print('Have you registered to vote yet?')
+else:
+    print("Sorry, you are too young to vote.")
+    print("Please register to vote as soon as you turn 18!")
+
+print("------------if elif else-----------------")
+# if elif else 语句
+# 如：4岁以下免收费，4～18收费5$，18岁(含)以上收10$
+age = 16
+if age < 4:
+    print("you admission cost is $0")
+elif age < 18:
+    print("you admission cost is $5")
+else:
+    print("you admission cost is $10")
+
+
+print("------------多 if elif else-----------------")
 # 多 if else 语句
-# 省略 if else
+# 例题 4岁以下免费，65岁以上，18岁以下半价
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+else:
+    price = 5
+
+print("You admission cost si $" + str(price) + ".")
+print("------------省略else-----------------")
+# 省略else
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+elif age >= 65:
+    price = 5
+print("You admission cost si $" + str(price) + ".")
+
+print("------------多条件实例-----------------")
+# 多条件实例 如：披萨店点餐，客户只点了两种配料，哪就需要在披萨中包含这些配料
+# 受限创建一个列表，用来存储客户选择的配料
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")
+if 'extra cheese' in requested_toppings:
+    print("Adding extra cheese.")
+
+print("\nFinished making your pizza!")
+
