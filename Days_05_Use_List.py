@@ -4,12 +4,12 @@ for循环，读取整个列表
 """
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
-	print(magician)
+    print(magician)
 print('\n')
 
 for magician in magicians:
-	print(magician.title() + ", that was a great trick!")
-	print("I can't wait to see your next trick, " + magician.title() + '.\n')
+    print(magician.title() + ", that was a great trick!")
+    print("I can't wait to see your next trick, " + magician.title() + '.\n')
 print("Thank you, everyone. That was a great magic show!")
 print('\n')
 """
@@ -23,7 +23,7 @@ print('\n')
 # 创建数值类型的列表
 # range()函数从第一个指定的数开始，到第二个值停止。不包含第二个数字。
 for value in range(1, 5):
-	print(value)
+    print(value)
 
 # 创建数字列表
 number = list(range(1, 6))
@@ -36,8 +36,8 @@ print(even_number)
 
 squares = []
 for value in range(1, 11):
-	square = value ** 2
-	squares.append(square)
+    square = value ** 2
+    squares.append(square)
 #   squares.append(value**2) 省略一点的写法
 print(squares)
 """
@@ -62,7 +62,7 @@ print(sum(squares))  # 列表中总和
 
 List = []
 for A in range(1, 1000):
-	List.append(A)
+    List.append(A)
 
 print(List)
 print(min(List))
@@ -72,15 +72,15 @@ print(sum(List))
 # 1-20奇数列表并打印
 odd = []
 for A in range(1, 21, 2):
-	odd.append(A)
-	print(A)
+    odd.append(A)
+    print(A)
 print(odd)
 
 # 1-10的立方
 cube = []
 for value in range(1, 11):
-	C = value ** 3
-	cube.append(C)
+    C = value ** 3
+    cube.append(C)
 print(cube)
 
 # 立方解析
@@ -90,4 +90,4 @@ print(cube)
 AA = [value ** 3 for value in range(1, 11)]
 print(AA)
 for AA in AA:
-	print(AA)
+    print(AA)
