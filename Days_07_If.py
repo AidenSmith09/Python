@@ -60,3 +60,8 @@ user = 'marie'
 if user not in banned_users:
     print(user.title() + ", you can post a response if you wish")
 # 首字大写输出
+
+# if else 语句
+# if else else 语句
+# 多 if else 语句
+# 省略 if else
