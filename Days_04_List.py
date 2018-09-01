@@ -99,9 +99,6 @@ print(motorcycles)
 print("\nA " + too_expensive.title() + " is too expensive for me.\n")  # 系统调用变量，故变量还可使用。
 
 # 列表排序
-"""
-
-"""
 # sort()方法对列表进行永久排序
 # sort(reverse=True)
 cars = ['bmw', 'audi', 'toyota', 'subaru']
