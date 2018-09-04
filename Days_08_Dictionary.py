@@ -83,7 +83,8 @@ favorite_languages = {
     'phil': 'python',
     'aiden': 'java'
 }
-print("Sarah's favorite languages is " + favorite_languages['sarah'].title() + ".")
+print("Sarah's favorite languages is " +
+      favorite_languages['sarah'].title() + ".")
 
 print("\n------遍历字典-----")
 # 遍历字典
@@ -116,10 +117,15 @@ friends = ['phil', 'sarah']  # 注意 这里是列表
 for name in favorite_languages:  # 省略keys()方法后依旧可行。但可读性下降。
     print(name.title())
     if name in friends:
-        print("Hi " + name.title() + ", I see your favorite languages is " + favorite_languages[name].title() + "!")
+        print(
+            "Hi " +
+            name.title() +
+            ", I see your favorite languages is " +
+            favorite_languages[name].title() +
+            "!")
 
 # keys()方法还有另一种用法，就是利用if not in 进行检索键值是是否存在于字典中。
-if 'erin' not in favorite_languages.keys():  #同样 keys() 方法可以被忽略。
+if 'erin' not in favorite_languages.keys():  # 同样 keys() 方法可以被忽略。
     print("\nErin, Please take our poll!")
 
 # 遍历字典中所有的值
@@ -129,10 +135,10 @@ for languages in favorite_languages.values():
     print(languages)  # 可以发先输出后有很多重复的值，字典小时，我们可以不在意，但字典量大时呢？
 
 print("\nThe following languages have been mentioned(去重复): ")
-for languages in set(favorite_languages.values()):  #使用 set() 方法来查找唯一的元素.
+for languages in set(favorite_languages.values()):  # 使用 set() 方法来查找唯一的元素.
     print(languages)
 
-languages = set(favorite_languages.values())  #同时也可以将这些唯一的值提取出来，存储在一个一个变量里
+languages = set(favorite_languages.values())  # 同时也可以将这些唯一的值提取出来，存储在一个一个变量里
 print(languages)
 for languages in languages:
     print(languages)
@@ -144,7 +150,7 @@ print("\n------嵌套-----")
 有时候需要很多字典存储在列表中，或者将列表作为值存储再字典中。这称之为嵌套。
 开发者可以"列表中嵌套字典"，也可以在"字典中嵌套列表"，还可以在"字典中嵌套字典"
 """
-#字典列表
+# 字典列表
 print("------列表中存储字典-----")
 """
 比如游戏开发中，创建三个外星人，每个字典代表着外星人颜色与分值。
@@ -206,3 +212,53 @@ for alien in aliens[0:5]:
 
 # 字典中存储列表
 print("------ 字典中存储列表 -------")
+# 比如，列表只能存储披萨配料，使用字典，可以存储披萨的其他属性。
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese']
+}
+
+print("You ordered a " + pizza['crust'] +
+      "-crust pizza with the following toppings:")
+
+for topping in pizza['toppings']:
+    print("\t" + topping)
+
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['C'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+}
+for name, languages in favorite_languages.items():
+    print("\n" + name.title() + "s favorite languages are:")
+    for language in languages:
+        print("\t" + language.title())
+
+
+# 字典中存储字典
+print("------ 字典中存储字典 -------")
+# 首选定义字典名 users
+# 创建两个key`aeinstein`和`mcurie`。key就如同字典的名称。值即包含`{}`的所有内容
+# 遍历`字典嵌套字典`时,创建两个变量来存储`key`与`value`
+# value是一个字典，故应该使用字典的格式去获取内容。
+#
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+    },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+    }
+}
+for username, user_info in users.items():
+    print("\nUsername:" + username)
+    full_name = user_info['first'] + " " + user_info['last']  # 将姓与名添加至一个变量中
+    location = user_info['location']
+    print("\tFull name: " + full_name.title())
+    print("\tLocation: " + location.title())
+
