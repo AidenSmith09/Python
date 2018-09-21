@@ -218,8 +218,7 @@ pizza = {
     'toppings': ['mushrooms', 'extra cheese']
 }
 
-print("You ordered a " + pizza['crust'] +
-      "-crust pizza with the following toppings:")
+print("You ordered a " + pizza['crust'] + "-crust pizza with the following toppings:")
 
 for topping in pizza['toppings']:
     print("\t" + topping)
@@ -243,22 +242,23 @@ print("------ 字典中存储字典 -------")
 # 遍历`字典嵌套字典`时,创建两个变量来存储`key`与`value`
 # value是一个字典，故应该使用字典的格式去获取内容。
 #
-users = {
-    'aeinstein': {
-        'first': 'albert',
+users = {  #这是大字典
+    'aeinstein': {  # 这是第一个小字典
+        'first': 'albert',  # 字典中的 key 和 value
         'last': 'einstein',
         'location': 'princeton',
     },
-    'mcurie': {
+    'mcurie': {  # 这是第二个小字典
         'first': 'marie',
         'last': 'curie',
         'location': 'paris',
     }
 }
-for username, user_info in users.items():
-    print("\nUsername:" + username)
-    full_name = user_info['first'] + " " + user_info['last']  # 将姓与名添加至一个变量中
-    location = user_info['location']
-    print("\tFull name: " + full_name.title())
-    print("\tLocation: " + location.title())
+for username, user_info in users.items():  # 循环users字典名称； username 是字典 key， user_info 小字典中的 key
+    print("\nUsername:" + username)  # 输出小子名称
+    full_name = user_info['first'] + " " + user_info['last']  # 将 value 姓与名整合至一个变量中
+    location = user_info['location']  # 创建变量存储 新的value
+    print("\tFull name: " + full_name.title())  # 输出整合后的value，姓名
+    print("\tLocation: " + location.title())    # 输出location 位置
+
 
