@@ -15,7 +15,6 @@ print(players[2:4])  # 从2开始到4，不包含4
 print(players[:2])  # 默认从0开始，不包含2
 print(players[0:])  # 下表0开始
 print(players[-3:])  # 倒数三个元素
-
 print('\n')
 
 # 遍历列表
