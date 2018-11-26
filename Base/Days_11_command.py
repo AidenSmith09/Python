@@ -16,5 +16,6 @@ print(n1 + n2)
 print(n1.__add__(n2))
 
 # bit_length() 获取二进制的最短位数
+n1 = 4
 ret = n1.bit_length()
 print(ret)
