@@ -34,7 +34,6 @@ while active:
 # break 跳出循环。即中断循环
 while True:
     city = input(prompt)
-
     if city == 'quit':
         break
     else:
