@@ -49,10 +49,10 @@ favorite_language = favorite_language.strip()
 print("被剔除前后空白的" + favorite_language)
 
 IP = " Aiden Smith "
-IP = IP.lstrip()
-IP = IP.rstrip()
+IP = IP.lstrip()  # 去除左边的空白
+IP = IP.rstrip()  # 去除右边的空白
 print(IP)
 
 S_IP = " Aiden Smiht "
-S_IP = S_IP.strip()
+S_IP = S_IP.strip()  # 去除中间空格
 print(S_IP)

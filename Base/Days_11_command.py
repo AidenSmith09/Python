@@ -16,6 +16,21 @@ print(n1 + n2)
 print(n1.__add__(n2))
 
 # bit_length() 获取二进制的最短位数
-n1 = 4
+n1 = 4  # 00000100
 ret = n1.bit_length()
 print(ret)
+
+a1 = "alden is alph1"
+ret = a1.count('al')
+print(ret)
+
+
+a1.isalpha()  # 检验内容是否是字母
+a1.istitle()  # 判断是不是标题
+print(a1.replace("al", "ai"))  # 替换内容
+
+
+# 查看源码时
+# 只有一个self表示无需传参，可以直接调用
+# 有两个 self 表示最多可传两个参数，同时会规定默认值。
+# 当不知道传几个参数是，查看源码。

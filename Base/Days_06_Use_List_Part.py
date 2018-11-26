@@ -17,6 +17,9 @@ print(players[0:])  # 下表0开始
 print(players[-3:])  # 倒数三个元素
 print('\n')
 
+for item in players:
+    print(item)
+
 # 遍历列表
 print("Here are the first three playse on my team:")
 for player in players[:3]:  # 循环0-3不包含3，依次存储至player。
@@ -67,3 +70,4 @@ dimensions = (500, 499)
 print("被重新赋值的元组:")
 for vluse in dimensions:
     print(vluse)
+
