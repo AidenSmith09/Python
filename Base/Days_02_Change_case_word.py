@@ -56,3 +56,19 @@ print(IP)
 S_IP = " Aiden Smiht "
 S_IP = S_IP.strip()  # 去除中间空格
 print(S_IP)
+print(S_IP.count('A'))
+print(len(S_IP))
+
+
+
+
+######## 总结 ######
+"""
+在Python中 Str 字符串类型的操作
+title()     将首字母大写
+lstrip()    删除左边的空格
+rstrip()    删除右边的空格
+strip()     删除中间的空格
+count()     计算字符串中，有几个相同字符。（需带参）
+len()       计算字符串的长度
+"""

@@ -42,4 +42,3 @@ print(message)
 str()就属于第一类。
 """
 
-import this

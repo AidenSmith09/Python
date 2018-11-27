@@ -33,6 +33,14 @@ friend_foods = my_foods[:]
 print(my_foods)
 print(friend_foods)
 
+a = my_foods.copy()
+print("我是copy", a)  # 注意此处不可使用+号拼接。
+
+a.extend(players)
+print(a)
+
+print("我是index", a.index('micheal'))
+
 """
 错误的Copy
 以下这种写法仅仅是将 fater 的值关联给 son ，而不是赋值。
@@ -59,8 +67,8 @@ print(dimensions[1])
 
 # 遍历元组
 print("遍历元组：")
-for vluse in dimensions:
-    print(vluse)
+for value in dimensions:
+    print(value)
 
 # 修改元组变量
 # 前边提过，元组的变量是无法修改的，为什么这里又能说修改呢？
@@ -68,6 +76,15 @@ for vluse in dimensions:
 
 dimensions = (500, 499)
 print("被重新赋值的元组:")
-for vluse in dimensions:
-    print(vluse)
+for value in dimensions:
+    print(value)
 
+
+########## 总结 ########
+"""
+append()    列表末尾追加
+clear()     清除列表所有内容
+copy()      复制列表，与字符串输出不可使用print("xx" + list)的方式，list不是字符串，不可拼接。
+extend()    扩展列表，即将两个列表合成一个，在后追加。
+index()     带参输出，查找参数在列表中的索引。
+"""
