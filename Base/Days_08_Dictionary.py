@@ -11,6 +11,9 @@ print("访问字典中的值")
 print(alien_0['color'])
 print(alien_0['points'])
 
+print("pop方法",alien_0.pop('color'))
+print("pop方法后",alien_0)
+
 # 比如，玩家射杀了外星人，就可以得到5点的分值
 new_points = alien_0['points']
 print("You just earned " + str(new_points) + " points!")
@@ -242,23 +245,39 @@ print("------ 字典中存储字典 -------")
 # 遍历`字典嵌套字典`时,创建两个变量来存储`key`与`value`
 # value是一个字典，故应该使用字典的格式去获取内容。
 #
-users = {  #这是大字典
-    'aeinstein': {  # 这是第一个小字典
-        'first': 'albert',  # 字典中的 key 和 value
+users = {                           #这是大字典
+    'aeinstein': {                  # 这是第一个小字典
+        'first': 'albert',          # 字典中的 key 和 value
         'last': 'einstein',
         'location': 'princeton',
     },
-    'mcurie': {  # 这是第二个小字典
+    'mcurie': {                     # 这是第二个小字典
         'first': 'marie',
         'last': 'curie',
         'location': 'paris',
     }
 }
-for username, user_info in users.items():  # 循环users字典名称； username 是字典 key， user_info 小字典中的 key
-    print("\nUsername:" + username)  # 输出小子名称
+for username, user_info in users.items():   # 循环users字典名称； username 是字典 key， user_info 小字典中的 key
+    print("\nUsername:" + username)         # 输出小子名称
     full_name = user_info['first'] + " " + user_info['last']  # 将 value 姓与名整合至一个变量中
-    location = user_info['location']  # 创建变量存储 新的value
+    location = user_info['location']        # 创建变量存储 新的value
     print("\tFull name: " + full_name.title())  # 输出整合后的value，姓名
     print("\tLocation: " + location.title())    # 输出location 位置
 
 
+
+########### 总结 ############
+"""
+Dictionary.keys()       获取所有的key
+Dictionary.values()     获取所有的值
+Dictionary.items()      获取键和值
+Dictionary.clear()      清除所有的内容
+Dictionary.get()        根据Key获取值，如果key不存在，可以指定一个默认值。
+Dictionary.has_key()    Python2 检查字典中指定的key是否存在。Python3中，可使用 key in Dictionary 来判断
+Dictionary.update()     更新字典，从后追加
+Dictionary.pop()        删除指定给定键所对应的值
+Dictionary.popitem()    随机返回并删除字典中的一对键和值
+del Dictionary['key']   删除指定键和值
+for x,y in Dictionary.items()   循环所有的键值
+
+"""
