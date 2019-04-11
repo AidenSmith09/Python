@@ -274,7 +274,7 @@ Dictionary.items()      获取键和值
 Dictionary.clear()      清除所有的内容
 Dictionary.get()        根据Key获取值，如果key不存在，可以指定一个默认值。
 Dictionary.has_key()    Python2 检查字典中指定的key是否存在。Python3中，可使用 key in Dictionary 来判断
-Dictionary.update()     更新字典，从后追加
+Dictionary.update({'key','values'})     更新字典，从后追加;另一种写法 Dictionary['key'] = values key存在则更新，不存在则追加。
 Dictionary.pop()        删除指定给定键所对应的值
 Dictionary.popitem()    随机返回并删除字典中的一对键和值
 del Dictionary['key']   删除指定键和值
