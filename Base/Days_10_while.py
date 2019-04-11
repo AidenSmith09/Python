@@ -1,6 +1,13 @@
 #while 循环
+
+"""
+while 条件：
+    pass
+continue # 跳过本次循环，且继续循环完成。
+break # 中断循环
+"""
 current_number = 1
-while current_number <= 5:  #循环变量从1开始，小于等于5
+while current_number <= 5:  # 循环变量从1开始，小于等于5
     print(current_number)  # 输出当前变量
     current_number += 1  # 输出后变量+1
 

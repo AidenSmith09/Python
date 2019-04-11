@@ -1,3 +1,18 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
+# 指定解释权，制定编码。
+
+"""
+Python2 使用的是 ASCII (所以无法输入中文)
+Python3 默认使用 utf-8
+
+ASCII -> unicode -> gbk,utf-8
+ASCII - 一个字节，8位
+unicode -> 最少两个字节，16位
+utf-8 -> 用多少表示多少，但3个字节表示一个中文
+gbk -> 2个字节表示一个中文
+"""
+
 print("Hello,world")
 message = 'Hello Python world'
 print(message)
