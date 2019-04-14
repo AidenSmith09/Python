@@ -1,3 +1,5 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
 name = 'add lovelace'
 print(name.title())
 """

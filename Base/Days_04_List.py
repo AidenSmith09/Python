@@ -1,3 +1,6 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
+
 list = ['A', 'B', 'C', 'D']
 print(list)
 # So 如此输出会吧列表中的内容，包括标点符号都输出到界面。

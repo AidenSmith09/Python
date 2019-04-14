@@ -1,3 +1,6 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
+
 """
 for循环，读取整个列表
 注：不要遗漏for循环最后"冒号"

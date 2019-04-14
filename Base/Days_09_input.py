@@ -1,3 +1,6 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
+
 # 用户输入
 # 使用input()函数进行变量存储
 

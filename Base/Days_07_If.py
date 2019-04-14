@@ -1,3 +1,6 @@
+# /bin/etc/env Python
+# -*- coding: utf-8 -*-
+
 # if条件判断语句
 cars = ['audi', 'bmw', 'subaru', 'toyota']
 
