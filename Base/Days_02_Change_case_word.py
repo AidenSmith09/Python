@@ -58,9 +58,15 @@ print(IP)
 S_IP = " Aiden Smiht "
 S_IP = S_IP.strip()  # 去除中间空格
 print(S_IP)
-print(S_IP.count('A'))
-print(len(S_IP))
+print("总共有",S_IP.count('A'),"A")
+print("名字长",len(S_IP),"个字符")
 
+
+path = 'ftp://acb/running_table'
+namespace = path.split('//')[1].split('/')[0]
+table = path.split('//')[1].split('/')[1]
+print(namespace)
+print(table)
 
 
 
@@ -73,4 +79,18 @@ rstrip()    删除右边的空格
 strip()     删除中间的空格
 count()     计算字符串中，有几个相同字符。（需带参）
 len()       计算字符串的长度
+split()     字符串分割函数
+format()    格式化函数 print(you name:{},age:{}.format(name,age))
+
+转义字符
+\newline #接下一行
+\\       #表示\
+\'       #表示单引号
+\"       #表示双引号
+\n       #换行
+\t       #横向制表符
+\b       #退格
+\v       #纵向制表符
+
+可以把字符串想象成单个字符组成的数组，所以字符串同样支持索引，切片，遍历等操作
 """
