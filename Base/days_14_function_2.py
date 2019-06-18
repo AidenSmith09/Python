@@ -46,3 +46,43 @@ def greet_users(names):
 
 usernames = ['hanah', 'trt', 'margot' , 'mongodb']
 greet_users(usernames)
+
+# Change Function List
+# 未使用函数的代码
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+# 使用过后的数据，移动至 completed_models 列表中
+while unprinted_designs:
+    current_design = unprinted_designs.pop()  # 删除列表中最后一个数据，并存储变量
+
+    print("Printing model: " + current_design)
+    completed_models.append(current_design)
+
+print("\nThe following models have been printed:")
+for completed_models in completed_models:
+    print(completed_models.title())
+
+
+# 使用函数重组代码，对比其区别。
+def print_models(unprinted_designs, completed_models):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()  # 删除列表中最后一个数据，并存储变量
+        print("Printing model: " + current_design)
+        completed_models.append(current_design)
+
+
+def show_completed_models(completed_models):
+    print("\nThe following models have been printed:")
+    for completed_models in completed_models:
+        print(completed_models.title())
+
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+print_models(unprinted_designs,completed_models)
+show_completed_models(completed_models)
+
+# 第二种写法更加直观，创建函数后，它不用去管数据是什么，仅对行为做操作。
+# 虽然两种写法结果都一样，但理念是不同的。
+# 即每个函数只负责一项具体的工作，不需要管理其他的事物。
+# 这种写法在排错上也更加容易定位问题。
+# 且在修改代码上，不需要进行全局操作。仅仅修改一个函数即可。
