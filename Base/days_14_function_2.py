@@ -104,3 +104,27 @@ def make_pizza(*topings):  # *号的作用是创建一个空元组
 
 make_pizza('pepperoni')
 make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+# 使用位置实参和任意数量实参
+def make_pizza_2(size, *toppints):
+    print("\nMaking a " + str(size) + "- inch pizza with the following toppings:")
+    for topping in toppints:
+        print("- " + topping)
+
+make_pizza_2(16, 'pepperoni')
+make_pizza_2(12, 'mushrooms', 'green peppers', 'extra cheese')
+'''
+可以发现，12被存储在size中，单剩下的字符串却被存储在元组toppings中。
+'''
+print("------分割线-------")
+
+
+def build_profile(first, last, **user_info):  # 其实可以理解为，第一个为形参，第二个为形参，第三则为字典形参
+    profile = {}   #创建一个字典用于保存字典形参
+    profile['first_name'] = first  # 保存第一个形参
+    profile['last_name'] = last  #保存第二个形参
+    for key, value in user_info.items():  #循环参数中传入的的键值对，并进行存储。
+        profile[key] = value  # 此处的表现形式不理解
+    return profile #返回数据至profile
+user_profile = build_profile('albert', 'einstenin', location='princeton', field='physics')  # 第三、四个参数是一个整体，作为字典参数。
+print(user_profile) #输出最终结果。

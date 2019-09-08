@@ -49,7 +49,7 @@ def describe_pet1(pet_name, animal_type='狗'):
 
 
 describe_pet1(pet_name='HaHa')
-describe_pet1(pet_name='毛毛', animal_type='猫')  # 我虽然指定了默认值，但默认值不是不能更改
+describe_pet1(pet_name='毛毛' , animal_type='猫')  # 我虽然指定了默认值，但默认值不是不能更改
 """
 这里需要注意一点，给形参制定默认参数时，带默认值的形参必须在后，否则报错。
 错误展示：def describe_pet1(animal_type = '狗',pet_name):
