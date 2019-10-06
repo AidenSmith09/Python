@@ -7,7 +7,7 @@ def build_person(first_name_person, last_name_person, age=''):
     return person
 
 
-musician = build_person('jimi', 'hendrix', age=12)
+musician = build_person('jimi', 'hendrix', age = 12)
 print(musician)
 """
 将数据返回到字典中去做存储。
@@ -96,7 +96,7 @@ show_completed_models(completed_models)
 # 且在修改代码上，不需要进行全局操作。仅仅修改一个函数即可。
 
 # 传递任意数量的实际参数
-def make_pizza(*topings):  # *号的作用是创建一个空元组
+def make_pizza(*topings):  # 星号的作用是创建一个空元组
     print("\nMaking a pizza with the following topings:")
     for topings in topings:
         print("- " + topings)
@@ -119,14 +119,14 @@ make_pizza_2(12, 'mushrooms', 'green peppers', 'extra cheese')
 print("------分割线-------")
 
 
-def build_profile(first, last, **user_info):  # 其实可以理解为，第一个为形参，第二个为形参，第三则为字典形参
-    profile = {}   #创建一个字典用于保存字典形参
+def build_profile(first, last, **user_info):  # 其实可以理解为，第一个为形参，第二个为形参，第三则为字典形参；双星号表示创建一个空字典。
+    profile = {}  # 创建一个字典用于保存字典形参
     profile['first_name'] = first  # 保存第一个形参
-    profile['last_name'] = last  #保存第二个形参
-    for key, value in user_info.items():  #循环参数中传入的的键值对，并进行存储。
+    profile['last_name'] = last  # 保存第二个形参
+    for key, value in user_info.items():  # 循环参数中传入的的键值对，并进行存储。
         profile[key] = value  # 此处的表现形式不理解
-    return profile #返回数据至profile
+    return profile  # 返回数据至profile
 user_profile = build_profile('albert', 'einstenin', location='princeton', field='physics')  # 第三、四个参数是一个整体，作为字典参数。
-print(user_profile) #输出最终结果。
+print(user_profile)  # 输出最终结果。
 
-#至此新建分支，开始利用Git
+# 至此新建分支，开始利用Git
