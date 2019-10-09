@@ -1,11 +1,14 @@
 # /bin/etc/env Python
 # -*- coding: utf-8 -*-
+if __name__ == '__main__':
+    print()
 
 
 def make_pizza(*topings):  # 星号的作用是创建一个空元组
     print("\nMaking a pizza with the following topings:")
     for topings in topings:
         print("- " + topings)
+
 
 def function_one():
     print('同目录导入函数1')

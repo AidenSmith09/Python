@@ -1,4 +1,6 @@
 *.xml
 *.iml
 *.name
-
+*.pyc
+__pycache__
+.gitignore
