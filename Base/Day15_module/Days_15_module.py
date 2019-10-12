@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 
 # 同目录下导入包、导入指定函数、设置函数别名
-import pack # 同目录下直接导入整个模块
+from packages.Days_15_function_3_module import frommodule_name_two as fnt
+from packages.Days_15_function_3_module import frommodule_name_one
+from packages import Days_15_function_3_module
+import pack  # 同目录下直接导入整个模块
 from pack import function_one           # 同目录下导入导入函数
 from pack import function_two as ft     # 为同目录下导入的函数设置别名
 
@@ -14,11 +17,9 @@ ft()            # 导入包中函数后，设置别名的使用。
 # for i in sys.path:
 #     print(i)
 # 异目录下导入包、导入函数、设置别名
-from packages import Days_15_function_3_module
-from packages.Days_15_function_3_module import frommodule_name_one
-from packages.Days_15_function_3_module import frommodule_name_two as fnt
 
-Days_15_function_3_module.make_pizza_2(12, 'mushrooms', 'green peppers', 'extra cheese') #函数调用
+Days_15_function_3_module.make_pizza_2(
+    12, 'mushrooms', 'green peppers', 'extra cheese')  # 函数调用
 frommodule_name_one()
 fnt()
 

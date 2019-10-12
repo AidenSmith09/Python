@@ -128,5 +128,49 @@ def build_profile(first, last, **user_info):  # 其实可以理解为，第一�
     return profile  # 返回数据至profile
 user_profile = build_profile('albert', 'einstenin', location='princeton', field='physics')  # 第三、四个参数是一个整体，作为字典参数。
 print(user_profile)  # 输出最终结果。
+print("------分割线-------")
 
-# 至此新建分支，开始利用Git
+"""
+函数变量作用域
+函数内部的变量称之为局部变量，不允许被外部调用，一旦函数执行完毕局部变量就会被回收。
+函数外部的变量称之为全局变量，可以被函数内部调用。
+但不随意更改全局变量的值，直接修改会报错，若想修改必须添加 global 这个声明。
+-------- 区分两种状态 ----"变量名不同"函数内部修改 ---- "变量相同"函数内部修改 ----
+函数内部的变量与外部同名时，内部变量优先。
+此时，想在函数内部修改外部变量的值，需要 nonlocal 这个声明。
+
+"""
+""" 
+            闭包 
+闭包使得局部变量在函数外被访问成为可能
+
+函数外部，是不可以访问函数内部的局部变量。
+需要内部函数去将结果返回给内部作用域。
+
+
+"""
+
+def nth_power(exponent):
+    def exponent_of(base):
+        return base ** exponent
+    return exponent_of  # 返回值是 exponent_of 函数
+
+square = nth_power(2)  # 计算一个数的平方
+cube = nth_power(3)  # 计算一个数的立方
+
+print(square(2))  # 计算 2 的平方
+print(cube(2))  # 计算 2 的立方
+
+"""
+外部是无法
+"""
+def print_msg():  # print_msg 是外围函数
+    msg = "zen of python"
+    def printer():  # printer 是嵌套函数
+        print(msg)
+    return printer
+
+another = print_msg() # print_msg(printer(print(msg))
+""""""
+# 输出 zen of python
+another()
