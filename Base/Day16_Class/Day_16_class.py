@@ -60,6 +60,11 @@ class Car():  # 创建模板过程
         """增加定额"""
         self.odometer_reading += miles
 
+    def fill_gas_tank(self, litre):
+        """汽油油箱"""
+        self.liter = litre
+        print("油箱剩余油量" + str(self.liter)+"L")
+
 
 my_new_car = Car('audi', "A8L", 2019)
 print(my_new_car.get_descriptive_name())
@@ -79,6 +84,7 @@ used_car.update_odometer(23500)         # 输入已有的里程
 used_car.read_odometer()                # 读取历程
 used_car.increment_odometer(100)        # 我卖车期间开了100公里，额定增加100
 used_car.read_odometer()
+used_car.fill_gas_tank(100)
 
 """
 类的继承
@@ -90,19 +96,37 @@ A则称之为"子类"，子类同时还可以拥有"自己的属性和方法"。
 """
 
 
-class ElectricCar(Car):
-    """子类必须位于父类之后，必须在括号里填写父类名称"""
-    def __init__(self, make, model, year): # 接收父类的信息
-        super().__init__(make, model, year)  # 将父类与子类关联
-        self.battery_size = 70
+class Battery():
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
 
     def describe_battery(self):
-        print("这是这辆车的 "+str(self.battery_size)+"-kWh 电量。")
+        print("这是这辆车的 " + str(self.battery_size) + "-kWh 电量。")
 
 
-my_tesla = ElectricCar('Tesla', 'model S', 2019)
-print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
+class ElectricCar(Car):
+    """子类必须位于父类之后，必须在括号里填写父类名称"""
+    def __init__(self, make, model, year):      # 接收父类的信息
+        super().__init__(make, model, year)     # 将父类与子类关联
+        self.run_km = 300                       # 子类私有属性添加默认值。
+        self.battery = Battery()                # 将类作为属性
+
+    def run_km_h(self):
+        """调用私有属性"""
+        print("车辆剩余公里为 "+str(self.run_km)+"km/h")
+
+    def fill_gas_tank(self, litre): #必须跟父类方法相同。
+        """父亲类方法重写"""
+        print("电车没有油箱")
+
+
+
+
+my_tesla = ElectricCar('Tesla', 'model S', 2019)  # 实例调用子类
+print(my_tesla.get_descriptive_name())  # 子类调用父类中的方法
+my_tesla.run_km_h()                     # 子类私有属性
+my_tesla.fill_gas_tank(100)             # 父类方法重写后的调用
+my_tesla.battery.describe_battery()     # 将类作为属性后调用
 
 """
 如何区分“类的方法”和”普通函数“？
