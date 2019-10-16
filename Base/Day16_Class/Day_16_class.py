@@ -63,7 +63,7 @@ class Car():  # 创建模板过程
     def fill_gas_tank(self, litre):
         """汽油油箱"""
         self.liter = litre
-        print("油箱剩余油量" + str(self.liter)+"L")
+        print("油箱剩余油量" + str(self.liter) + "L")
 
 
 my_new_car = Car('audi', "A8L", 2019)
@@ -103,9 +103,21 @@ class Battery():
     def describe_battery(self):
         print("这是这辆车的 " + str(self.battery_size) + "-kWh 电量。")
 
+    def get_range(self):
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 280
+        else:
+            range = "请输入电量"
+        message = "This car can go approximately " + str(range)
+        message += " miles on a full charge."
+        print(message)
+
 
 class ElectricCar(Car):
     """子类必须位于父类之后，必须在括号里填写父类名称"""
+
     def __init__(self, make, model, year):      # 接收父类的信息
         super().__init__(make, model, year)     # 将父类与子类关联
         self.run_km = 300                       # 子类私有属性添加默认值。
@@ -113,20 +125,18 @@ class ElectricCar(Car):
 
     def run_km_h(self):
         """调用私有属性"""
-        print("车辆剩余公里为 "+str(self.run_km)+"km/h")
+        print("车辆剩余公里为 " + str(self.run_km) + "km/h")
 
-    def fill_gas_tank(self, litre): #必须跟父类方法相同。
+    def fill_gas_tank(self, litre):  # 必须跟父类方法相同。
         """父亲类方法重写"""
         print("电车没有油箱")
-
-
-
 
 my_tesla = ElectricCar('Tesla', 'model S', 2019)  # 实例调用子类
 print(my_tesla.get_descriptive_name())  # 子类调用父类中的方法
 my_tesla.run_km_h()                     # 子类私有属性
 my_tesla.fill_gas_tank(100)             # 父类方法重写后的调用
 my_tesla.battery.describe_battery()     # 将类作为属性后调用
+my_tesla.battery.get_range()
 
 """
 如何区分“类的方法”和”普通函数“？

@@ -1,8 +1,10 @@
 # /bin/etc/env Python
 # -*- coding: utf-8 -*-
 
-list = ['A', 'B', 'C', 'D']
-print(list)
+list1 = ['A', 'B', 'C', 'D']
+list2 = [1,2,3,4,5]
+print(list1)
+print(list2)
 # So 如此输出会吧列表中的内容，包括标点符号都输出到界面。
 # 那是不是可以理解为，此次输出，输出的是list变量，而不是数组。
 # 但是严格来讲，此次输出依旧是列表，只不过是列表的内部表现形式。
@@ -74,6 +76,7 @@ print(motorcycles)
 popped_motorcycles = motorcycles.pop()
 print(motorcycles)
 print(popped_motorcycles.title())
+
 """
 同时pop()方法可以删除列表中任何位置的元素。但前提是需要知道索引。
 可以看到经过程序的顺序执行，motorcycles列表中的内容已经被删除到只剩两个。
