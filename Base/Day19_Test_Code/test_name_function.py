@@ -12,5 +12,9 @@ class NamesTestCase(unittest.TestCase):
         formatted_name = get_formatted_name('aiden', 'smith')
         self.assertEqual(formatted_name, 'Aiden Smith')
 
+    def test_first_middle_last_name(self):
+        formatted_name = get_formatted_name('wolfgang','mozart','amadeus')
+        self.assertEqual(formatted_name,'Wolfgang Mozart Amadeus')
+
 
 unittest.main()
