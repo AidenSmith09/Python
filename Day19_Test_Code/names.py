@@ -11,6 +11,9 @@ while True:
     last = input("请输入名 last name: ")
     if last == 'q':
         break
+    middle = input("请输入middle name：")
+    if middle == 'q':
+        break
 
-    fromatted = get_formatted_name(first, last)
-    print("\t格式整齐的名称： " + fromatted + "。")
+    fromatted = get_formatted_name(first, last, middle)
+    print("\t格式整齐的名称： " + fromatted + ".")
