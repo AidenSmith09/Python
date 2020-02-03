@@ -37,7 +37,8 @@ describe_pet('harry', '仓鼠')
 若顺序搞混，会导致传参出错。
 这也许是个小问题，但是再庞大的数据开发数据中，真的有可能发生。
 """
-describe_pet(animal_type='仓鼠', pet_name="harry")  # 关键字实参
+print("---")
+describe_pet(pet_name="harry",animal_type='仓鼠',)  # 关键字实参
 """
 在调用中，形参与实参进行绑定，则无需考虑实参的顺序问题。
 """

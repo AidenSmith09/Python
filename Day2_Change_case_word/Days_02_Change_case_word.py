@@ -83,8 +83,8 @@ split()     字符串分割函数
 format()    格式化函数 print(you name:{},age:{}.format(name,age))
 
 转义字符
-\newline #接下一行
-\\       #表示\
+\n       #接下一行
+\\       #表示'\'
 \'       #表示单引号
 \"       #表示双引号
 \n       #换行
